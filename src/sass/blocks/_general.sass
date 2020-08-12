@@ -4,12 +4,14 @@
     line-height: normal
     margin: 0
     outline: none
+    margin-bottom: 0rem
 .container
-    width: 1140px
+    width: 60%
     margin: 0 auto
 ul
     padding: 0
     margin: 0
+    list-style-type: none
 a
     color: inherit
     text-decoration: none
@@ -20,35 +22,39 @@ a
         color: inherit
 
 .contacts
-    padding-top: 19px
-    height: 85px
+    padding-top: 1.4rem
+    padding-bottom: 1rem
+    min-height: 8vh
     &__wrapper
         margin: 0 auto
         display: flex
 .contacts-item
-    margin: 0 9.5px
-    &__contacts
-        margin-left: 10px
+    margin: 0 0.6em
     display: flex
     align-items: flex-start
     max-height: 100%
+    &__contacts
+        margin-left: 0.63em
     &__address
-        font-size: 12px
+        font-size: 0.75em
         color: #242424
         max-height: 100%
+        
     &__subheader
-        font-size: 14px
+    
+        font-size: 0.88em
         font-weight: bold
+        margin-bottom: 0.3rem
     &__tel
-        font-size: 12px
+        font-size: 0.75em
         font-weight: 300
         line-height: 1.5
 .main
     background: url(../img/main_bg.jpg) center no-repeat
     background-size: cover
     width: 100%
-    min-height: 700px
-    padding-top: 39px
+    min-height: 92vh
+    padding: 2.4rem 0
     position: relative
     &__header
         display: flex
@@ -56,22 +62,11 @@ a
         align-items: center
     &__menu
         display: flex
-        justify-content: flex-end
-   
-        list-style-type: none
         color: #ffffff
-        &__item
-            margin: 0 21px
-            font-size: 13px
-            font-weight: bold
-            line-height: 2
-            text-transform: uppercase
-        &__link
-            width: 100%
-            height: 100%
     &__promo
-        margin-top: 133px
-        font-size: 42px
+        margin-top: 8.35rem
+    
+        font-size: 2.7em
         font-weight: 900
         line-height: 1.14
         text-align: left
@@ -81,50 +76,56 @@ a
     &__phone
         position: absolute
         bottom: 0
-        right: 18%
+        right: 21%
+        max-height: 75%
 .button
-    
+    cursor: pointer
     background-color: #00c2f0
     border: none
-    border-radius: 5px
-    text-transform: 
+    border-radius: 5px 
     color: #fff
+    padding: 24px 40px
+    font-size: 1em
+    text-transform: uppercase
     &:hover
         box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.7)
         background-color: #0db3dd
     &_main
-        width: 241px
-        height: 60px
+    
         margin-top: 32px
+    &_begin
+        margin-top: 30px
+        
 .advantages
-    height: 896px
-    padding-top: 79px
+
+    min-height: 100vh
+    padding: 5rem 0
     &__wrapper
         display: flex
         justify-content: space-between
     &__item
         position: relative
-        margin: 0 15px
+        margin: 0 .95em
         text-align: center
         align-content: center
         width: 31.5%
         border: 1px solid rgba(0, 0, 0, 0.1)
         overflow: hidden
-        padding-bottom: 36px
-        &__descr
-            font-size: 18px
-            margin: 0 auto
-            font-weight: 300
-            line-height: 1.44
-            text-align: center
-            color: #393939
-            max-width: 70%
-        &__bg
-            position: absolute
-            bottom: -10%
-            right: -10%
+        padding-bottom: 2.3em
+    &__descr
+        font-size: 1.125em
+        margin: 0 auto
+        font-weight: 300
+        line-height: 1.44
+        text-align: center
+        color: #393939
+        max-width: 70%
+    &__bg
+        position: absolute
+        bottom: -10%
+        right: -10%
 .devider
-    margin: 50px auto 37px auto
+    margin: 3.1rem auto 2.4rem auto
     text-align: center
     &__title
         margin-top: 33px
@@ -133,13 +134,14 @@ a
         line-height: 0.63
         color: #393939
 .slider
-    height: 889px
-  
+    min-height: 100vh  
     background: url(../img/slider_bg.jpg) center center/cover no-repeat
-    padding: 79px 0 61px 0
+    padding: 4.1% 0 3.2% 0
+    
     &__item
         margin: 0 auto
         display: none
+        max-width: 100%
         &_active
             display: block
 
@@ -148,22 +150,37 @@ a
         text-align: center
         position: relative
     &__prev
-        height: 100%
+        height: 95%
         width: 5vw
         position: absolute
         top: 0
-        left: 0
+        left: 10%
+        border-radius: 4px
         cursor: pointer
-      
+        &:hover
+           background-color: rgba(0,0,0,0.1)
+        img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: .5rem
+        
 
     &__next
-        height: 100%
+        height: 95%
         width: 5vw
         position: absolute
         top: 0
-        right: 0
+        right: 10%
+        border-radius: 4px
         cursor: pointer
+        &:hover
+           background-color: rgba(0,0,0,0.1)
         img
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: .5rem
             
 
 
@@ -172,26 +189,176 @@ a
     border: 1px solid white
     border-radius: 4px
     margin: 25px auto
-    padding: 7px 0 9px 0
-    height: 65px
-    ul 
-        display: flex
-        height: 100%
-        justify-content: space-between
-        align-items: center
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__link
+        padding: 1.7em 3.5em
+        height: 60%
 
     &__item
         list-style-type: none
         border-right: 1px solid rgba(255,255,255, .3)
-        font-size: 14px
-        line-height: 3
-        padding: 0 3.5em
+        font-size: 0.875em
+        
         height: 100%
         text-align: center
         color: #ffffff
         cursor: pointer
         &:hover
             color: #00c2f0
+
+.causes
+    padding: 5rem 0
+
+    &__wrapper
+        margin-top: 3rem
+        display: flex
+        flex-wrap: wrap
+
+    &__item
+        width: 50%
+        min-height: 355px
+        display: flex
+        align-items: center
+        justify-content: center
+        &:nth-child(1)
+            background: url(../img/adv_1.jpg) center center/cover no-repeat
+        &:nth-child(2)
+            background: url(../img/adv_1.jpg) center center/cover no-repeat
+        &:nth-child(3)
+            background: url(../img/adv_3.jpg) center center/cover no-repeat
+        &:nth-child(4)
+            background: url(../img/adv_4.jpg) center center/cover no-repeat
+        &:nth-child(5)
+            background: url(../img/adv_5.jpg) center center/cover no-repeat
+        &:nth-child(6)
+            background: url(../img/adv_6.jpg) center center/cover no-repeat
+    &__text
+       
+        font-size: 1.44em
+        line-height: 1.13
+        text-align: center
+        color: #ffffff
+        max-width: 65%
+.options
+    display: flex
+    position: relative
+    &__item
+        width: 50%
+        height: 580px
+        position: relative
+        padding: 0 3rem
+        &:nth-child(2)
+            background: url(../img/cloud_bg.jpg) center center/cover no-repeat
+        &:nth-child(3)
+            background: url(../img/local_bg.jpg) center center/cover no-repeat
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-end
+        height: 100%
+        &_right
+            align-items: flex-start
+            
+        
+
+    &__square
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 3rem
+        &_right
+            left: 3rem
+            
+
+
+    &__subheader
+        font-size: 1.9em
+        font-weight: 900
+        line-height: 0.73
+        letter-spacing: normal
+        color: #ffffff
+        padding-right: 3rem
+        &_right
+            text-align: left
+            padding-left: 3rem
+
+
+    &__descr
+        font-size: 1.2em
+        font-weight: 300
+        line-height: 1.44
+        text-align: right
+        color: #ffffff
+        width: 60%
+        padding-right: 3rem
+        margin-top: 1rem
+        &_right
+            text-align: left
+            padding-left: 3rem
+
+        
+.begin
+    padding: 9vh
+    text-align: center
+
+.footer
+    background: #0082a1
+    padding: 4.5vh 0 4vh 0
+    
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__about
+        width: 30%
+
+    &__logo
+
+        margin-bottom: 1em
+    &__descr
+     
+        font-size: 0.88em
+        font-weight: 300
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.36
+        letter-spacing: normal
+        text-align: left
+        color: #ffffff
+    &__devider
+        width: 100%
+        height: 1px
+        background-color: #00c2f0
+        margin: 3.5vh 0
+    &__copyright
+        color: #ffffff
+        font-size: 0.88em
+        text-align: center
+.list
+    font-size: 0.88em
+    font-weight: 300
+    color: white
+    
+    &__link
+        padding: 0.5em 0
+        
+    
+        
+    
+        
+        
+
+
+
+
+
+
+
+
 
         
 

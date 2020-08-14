@@ -5,6 +5,15 @@
     margin: 0
     outline: none
     margin-bottom: 0rem
+
+@keyframes start
+    from
+        transform: scale(1)
+    50%
+        transform: scale(0.8)
+    100%
+        transform: scale(1)
+        
 .container
     width: 60%
     margin: 0 auto
@@ -307,6 +316,9 @@ a
 .begin
     padding: 9vh
     text-align: center
+    &__icon
+        animation: start 2s infinite
+    
 
 .footer
     background: #0082a1

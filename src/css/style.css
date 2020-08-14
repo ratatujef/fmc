@@ -7,6 +7,36 @@
   margin-bottom: 0rem;
 }
 
+@-webkit-keyframes start {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes start {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .container {
   width: 60%;
   margin: 0 auto;
@@ -456,6 +486,11 @@ a:visited, a:hover, a:focus, a:active {
 .begin {
   padding: 9vh;
   text-align: center;
+}
+
+.begin__icon {
+  -webkit-animation: start 2s infinite;
+          animation: start 2s infinite;
 }
 
 .footer {

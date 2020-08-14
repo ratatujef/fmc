@@ -18,7 +18,7 @@
                     <div class="contacts-item__contacts">
                         <p class="contacts-item__subheader">Ukraine</p>
                         <a href="tel:+3806393007002" class="contacts-item__tel">
-                            tel. +38(063) 930 07 002</a>
+                            tel. +38063 930 07 002</a>
                         <a href="mailto:hi@vasolutions.com.ua" class="contacts-item__tel">hi@vasolutions.com.ua</a>
                     </div>
                 </li>
@@ -63,7 +63,7 @@
     <main class="main">
         <div class="container">
             <headrer class="main__header">
-                <a href="#" class="header__link"><img src="img/logo.png" alt="logo" class="header_img"></a>
+                <a href="#" class="header__link"><img src="img/logo.png" alt="logo" class="header__img"></a>
                 <nav>
                     <ul class="menu main__menu">
                         <li class="menu__item"><a href="#" class="menu__link">главная</a></li>
@@ -268,6 +268,43 @@
             <p class="footer__copyright">© Prengi Ink. 2008-2017 Все права защищены.</p>
         </div>
     </footer>
+    <section class="overlay">
+        <div class="modal">
+            <header class="modal__header">
+                <h3 сlass="modal__title">Оставьте вашу заявку</h3>
+                <div class="close">&times</div>
+            </header>
+            <form action="#" name="modal" method="POST" class="form">
+                <input type="text" class="input" pattern="[А-Яа-яЁё]{2,10}" required placeholder="Введите ваше имя...">
+                <input type="tel" class="input" required pattern="+[0-9]{10}" placeholder="Введите ваш номер телефона...">
+                <input type="email" class="input" placeholder="Введите вашу почту...">
+                <label><input type="checkbox" required> Согласие на обработку данных</label> 
+                <input class="button button_modal" type="submit" value="Отправить заявку">
+            </form>
+        </div>
+    </section>
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            let overlay = document.querySelector('.overlay'),
+            close= document.querySelector('.close'),
+            btn=document.querySelectorAll('button'),
+            name=document.querySelector('input[type="text"]');
+            btn.forEach(element => {
+                element.addEventListener('click',()=>{
+                    overlay.classList.add('overlay_active');
+                })
+            close.addEventListener('click',()=>{
+                overlay.classList.remove('overlay_active');
+            })
+                
+            });
+            name.addEventListener('input',()=>{
+                if(name.validity.typeMismatch){
+                    name.setCustomValidity('Ошибка!')
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
